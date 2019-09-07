@@ -796,7 +796,6 @@ commands_recovery_local_path := $(LOCAL_PATH)
 #    $(LOCAL_PATH)/bootloader_message/Android.mk
 include \
     $(commands_TWRP_local_path)/boot_control/Android.mk \
-    $(commands_TWRP_local_path)/tests/Android.mk \
     $(commands_TWRP_local_path)/tools/Android.mk \
     $(commands_TWRP_local_path)/updater/Android.mk \
     $(commands_TWRP_local_path)/update_verifier/Android.mk \
