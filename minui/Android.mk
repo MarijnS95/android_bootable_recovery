@@ -65,7 +65,13 @@ LOCAL_WHOLE_STATIC_LIBRARIES += libdrm
 endif
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
     LOCAL_CFLAGS += -DHAS_LIBSYNC
+
+ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 29; echo $$?),0)
+    LOCAL_WHOLE_STATIC_LIBRARIES += libsync
+else
     LOCAL_WHOLE_STATIC_LIBRARIES += libsync_recovery
+endif
+
 endif
 
 LOCAL_CFLAGS += -Wall -Werror -std=c++14 -Wno-unused-private-field
