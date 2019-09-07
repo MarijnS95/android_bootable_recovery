@@ -3,8 +3,6 @@ cc_library {
 
     host_supported: true,
 
-    tags: ["eng"],
-
     srcs: [
         "system.c",
         "popen.c",

@@ -4,8 +4,6 @@ cc_library {
     host_supported: true,
     export_include_dirs: ["."],
 
-    tags: ["eng"],
-
     srcs: [
         "bmlutils.c",
     ],
