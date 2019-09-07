@@ -25,7 +25,6 @@ endif
 LOCAL_SRC_FILES += $(target_src_files)
 LOCAL_CFLAGS += $(target_c_flags)
 LOCAL_C_INCLUDES += $(target_c_includes) $(commands_recovery_local_path)/crypto/scrypt/lib/util
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libscrypttwrp_static
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 28; echo $$?),0)
     LOCAL_REQUIRED_MODULES := $(local_additional_dependencies)
@@ -44,7 +43,6 @@ LOCAL_SRC_FILES += $(host_src_files)
 LOCAL_CFLAGS += $(host_c_flags)
 LOCAL_C_INCLUDES += $(host_c_includes) $(commands_recovery_local_path)/crypto/scrypt/lib/util
 LOCAL_LDLIBS += -ldl
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libscrypttwrp_static
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 28; echo $$?),0)
     LOCAL_REQUIRED_MODULES := $(local_additional_dependencies)

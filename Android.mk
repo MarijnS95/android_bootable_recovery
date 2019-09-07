@@ -541,7 +541,6 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := file_contexts_text
-LOCAL_MODULE_TAGS := optional
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 28; echo $$?),0)
     LOCAL_REQUIRED_MODULES := file_contexts.bin
 else
@@ -585,7 +584,6 @@ $(RECOVERY_BUSYBOX_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := busybox_symlinks
-LOCAL_MODULE_TAGS := optional
 LOCAL_ADDITIONAL_DEPENDENCIES := $(RECOVERY_BUSYBOX_SYMLINKS)
 ifneq (,$(filter $(PLATFORM_SDK_VERSION),16 17 18))
 ALL_DEFAULT_INSTALLED_MODULES += $(RECOVERY_BUSYBOX_SYMLINKS)
@@ -629,7 +627,6 @@ LOCAL_CLANG := true
 LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter
 LOCAL_CFLAGS += -D_XOPEN_SOURCE -D_GNU_SOURCE
 
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libfusesideload
 LOCAL_SHARED_LIBRARIES := libcutils libc
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -lt 24; echo $$?),0)
@@ -654,7 +651,6 @@ LOCAL_CLANG := true
 LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter
 LOCAL_CFLAGS += -D_XOPEN_SOURCE -D_GNU_SOURCE
 
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libfusesideload
 LOCAL_SHARED_LIBRARIES := libcutils libc
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -lt 24; echo $$?),0)
@@ -713,7 +709,6 @@ include $(CLEAR_VARS)
 
 
 LOCAL_MODULE := libaosprecovery
-LOCAL_MODULE_TAGS := eng optional
 LOCAL_CFLAGS := -std=gnu++0x
 LOCAL_SRC_FILES := adb_install.cpp legacy_property_service.cpp set_metadata.cpp tw_atomic.cpp installcommand.cpp zipwrap.cpp
 LOCAL_SHARED_LIBRARIES += libc liblog libcutils libmtdutils libfusesideload libselinux libminzip

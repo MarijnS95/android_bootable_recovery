@@ -48,6 +48,5 @@ LOCAL_CFLAGS := \
 LOCAL_CFLAGS += -Wno-pointer-arith -Wno-sign-compare -Wno-unused-parameter
 
 LOCAL_MODULE := libfusetwrp
-LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_STATIC_LIBRARY)

@@ -355,7 +355,6 @@ endif
 LOCAL_MODULE := toybox_recovery
 LOCAL_MODULE_STEM := toybox
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
-LOCAL_MODULE_TAGS := optional
 
 # dupes: dd df du ls mount renice
 # useless?: freeramdisk fsfreeze install makedevs mkfifo nbd-client
@@ -584,7 +583,6 @@ $(SYMLINKS): $(LOCAL_INSTALLED_MODULE) $(LOCAL_PATH)/Android.mk
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := toybox_symlinks
-LOCAL_MODULE_TAGS := optional
 LOCAL_ADDITIONAL_DEPENDENCIES := $(SYMLINKS)
 include $(BUILD_PHONY_PACKAGE)
 

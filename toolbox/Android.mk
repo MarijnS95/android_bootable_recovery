@@ -9,7 +9,7 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -lt 24; echo $$?),0)
         start \
         stop
 endif
-    
+
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -lt 23; echo $$?),0)
     OUR_TOOLS += \
         getprop \
@@ -269,7 +269,6 @@ endif
 LOCAL_MODULE := toolbox_recovery
 LOCAL_MODULE_STEM := toolbox
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
-LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-const-variable
 
 # Including this will define $(intermediates) below
@@ -306,7 +305,6 @@ $(SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := toolbox_symlinks
-LOCAL_MODULE_TAGS := optional
 LOCAL_ADDITIONAL_DEPENDENCIES := $(SYMLINKS)
 include $(BUILD_PHONY_PACKAGE)
 

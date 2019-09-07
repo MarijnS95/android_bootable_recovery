@@ -21,7 +21,6 @@ LOCAL_CLANG := true
 LOCAL_C_INCLUDES += $(commands_recovery_local_path)
 
 LOCAL_SRC_FILES := uncrypt.cpp
-LOCAL_MODULE_TAGS := optional
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/..
 LOCAL_MODULE := uncrypt

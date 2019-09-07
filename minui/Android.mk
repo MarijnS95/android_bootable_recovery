@@ -143,7 +143,6 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := minuitest
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
 LOCAL_SRC_FILES := main.cpp
 LOCAL_SHARED_LIBRARIES := libbinder libminui libpng libz libutils libstdc++ libcutils liblog libm libc

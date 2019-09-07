@@ -3,7 +3,6 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libutil-linux
-LOCAL_MODULE_TAGS := optional
 #LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_CFLAGS := -D_FILE_OFFSET_BITS=64 -DHAVE_LOFF_T -DHAVE_ERR_H -DHAVE_MEMPCPY -DHAVE_FSYNC
 LOCAL_CFLAGS += -Wno-missing-field-initializers -Wno-sign-compare -Wno-unused-parameter -Wno-format -Wno-pointer-arith
@@ -42,7 +41,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libuuid
-LOCAL_MODULE_TAGS := optional
 #LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_CFLAGS := -D_FILE_OFFSET_BITS=64 -DHAVE_LOFF_T -DHAVE_ERR_H -DHAVE_MEMPCPY -DHAVE_FSYNC
 LOCAL_CFLAGS += -Wno-missing-field-initializers -Wno-sign-compare -Wno-unused-parameter -Wno-format -Wno-pointer-arith
@@ -69,7 +67,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libfdisk
-LOCAL_MODULE_TAGS := optional
 #LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_CFLAGS := -D_FILE_OFFSET_BITS=64 -DHAVE_LOFF_T -DHAVE_ERR_H -DHAVE_MEMPCPY -DHAVE_FSYNC
 LOCAL_CFLAGS += -Wno-missing-field-initializers -Wno-sign-compare -Wno-unused-parameter -Wno-format -Wno-pointer-arith
@@ -102,7 +99,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libblkid
-LOCAL_MODULE_TAGS := optional
 #LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_CFLAGS := -D_FILE_OFFSET_BITS=64 -DHAVE_LOFF_T -DHAVE_ERR_H -DHAVE_MEMPCPY -DHAVE_FSYNC
 LOCAL_CFLAGS += -Wno-missing-field-initializers -Wno-sign-compare -Wno-unused-parameter -Wno-format -Wno-pointer-arith

@@ -30,7 +30,6 @@ LOCAL_CFLAGS := \
     -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS
 
 LOCAL_SRC_FILES := config.cpp ota_io.cpp
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libotafault
 LOCAL_CLANG := true
 LOCAL_C_INCLUDES := $(commands_recovery_local_path)
@@ -44,7 +43,6 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := config.cpp ota_io.cpp test.cpp
-LOCAL_MODULE_TAGS := tests
 LOCAL_MODULE := otafault_test
 LOCAL_STATIC_LIBRARIES := $(otafault_static_libs)
 LOCAL_CFLAGS := -Werror
