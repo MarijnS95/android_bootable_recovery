@@ -130,36 +130,3 @@ else
 endif
 
 include $(BUILD_STATIC_LIBRARY)
-
-# libminui (shared library)
-# ===============================
-# Used by OEMs for factory test images.
-include $(CLEAR_VARS)
-LOCAL_CLANG := true
-LOCAL_MODULE := libminui
-LOCAL_WHOLE_STATIC_LIBRARIES += libminui
-LOCAL_SHARED_LIBRARIES := \
-    libpng \
-    libbase
-
-LOCAL_CFLAGS := -Wall -Werror -std=c++14 -Wno-unused-private-field
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
-include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := minuitest
-LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_SRC_FILES := main.cpp
-LOCAL_SHARED_LIBRARIES := libbinder libminui libpng libz libutils libstdc++ libcutils liblog libm libc
-LOCAL_C_INCLUDES := external/libcxx/include external/libpng
-ifneq ($(TARGET_ARCH), arm64)
-    ifneq ($(TARGET_ARCH), x86_64)
-        LOCAL_LDFLAGS += -Wl,-dynamic-linker,/sbin/linker
-    else
-        LOCAL_LDFLAGS += -Wl,-dynamic-linker,/sbin/linker64
-    endif
-else
-    LOCAL_LDFLAGS += -Wl,-dynamic-linker,/sbin/linker64
-endif
-include $(BUILD_EXECUTABLE)

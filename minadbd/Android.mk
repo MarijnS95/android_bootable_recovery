@@ -81,22 +81,3 @@ else
 endif
 
 include $(BUILD_STATIC_LIBRARY)
-
-# minadbd_test (native test)
-# ===============================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := minadbd_test
-LOCAL_COMPATIBILITY_SUITE := device-tests
-LOCAL_SRC_FILES := fuse_adb_provider_test.cpp
-LOCAL_CFLAGS := $(minadbd_cflags)
-LOCAL_C_INCLUDES := $(LOCAL_PATH) system/core/adb
-LOCAL_STATIC_LIBRARIES := \
-    libBionicGtestMain \
-    libminadbd
-LOCAL_SHARED_LIBRARIES := \
-    liblog \
-    libbase \
-    libcutils
-
-include $(BUILD_NATIVE_TEST)

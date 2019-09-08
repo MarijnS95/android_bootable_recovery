@@ -405,7 +405,7 @@ TWRP_REQUIRED_MODULES += \
     mke2fs.conf \
     pigz \
     teamwin \
-    toolbox_symlinks \
+    toolbox \
     twrp \
     fsck.fat \
     fatlabel \
